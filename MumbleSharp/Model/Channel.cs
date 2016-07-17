@@ -64,7 +64,7 @@ namespace MumbleSharp.Model
             var messages = message.Split(_split, StringSplitOptions.None);
             SendMessage(messages, recursive);
         }
-
+        /*
         public void SendVoice(ArraySegment<byte> buffer, bool whisper = false)
         {
             Owner.SendVoice(
@@ -73,12 +73,12 @@ namespace MumbleSharp.Model
                 targetId: Id
             );
         }
-
+        
         public void SendVoiceStop()
         {
             Owner.SendVoiceStop();
         }
-
+        */
         public override string ToString()
         {
             return Name;

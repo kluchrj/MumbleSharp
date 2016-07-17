@@ -51,7 +51,7 @@ namespace MumbleSharp
         public SpeechCodecs TransmissionCodec { get; private set; }
 
         public User LocalUser { get; private set; }
-
+        /*
         private AudioEncodingBuffer _encodingBuffer;
         private readonly Thread _encodingThread;
 
@@ -63,7 +63,7 @@ namespace MumbleSharp
                 IsBackground = true
             };
         }
-
+        */
         /// <summary>
         /// Associates this protocol with an opening mumble connection
         /// </summary>
@@ -220,10 +220,10 @@ namespace MumbleSharp
 
             //Get the local user
             LocalUser = UserDictionary[serverSync.session];
-
+            /*
             _encodingBuffer = new AudioEncodingBuffer();
             _encodingThread.Start();
-
+            */
             ReceivedServerSync = true;
         }
 
@@ -235,7 +235,7 @@ namespace MumbleSharp
         {
         }
         #endregion
-
+        /*
         #region voice
         private void EncodingThreadEntry()
         {
@@ -247,7 +247,7 @@ namespace MumbleSharp
                     Connection.SendVoice(new ArraySegment<byte>(packet));
             }
         }
-
+        */
         public virtual void CodecVersion(CodecVersion codecVersion)
         {
             if (codecVersion.opus)
@@ -280,7 +280,7 @@ namespace MumbleSharp
         public virtual void UdpPing(byte[] packet)
         {
         }
-
+        /*
         /// <summary>
         /// Received a voice packet from the server
         /// </summary>
@@ -308,7 +308,7 @@ namespace MumbleSharp
             _encodingBuffer.Stop();
         }
         #endregion
-
+        */
         
 
         

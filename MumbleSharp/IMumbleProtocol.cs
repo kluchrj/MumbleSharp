@@ -64,9 +64,9 @@ namespace MumbleSharp
         void ServerSync(ServerSync serverSync);
 
         void ServerConfig(ServerConfig serverConfig);
-
+        /*
         void EncodedVoice(byte[] packet, uint userSession, long sequence, IVoiceCodec codec, SpeechTarget target);
-
+        */
         void UdpPing(byte[] packet);
 
         void Ping(Ping ping);
@@ -82,9 +82,10 @@ namespace MumbleSharp
         void SuggestConfig(SuggestConfig suggestedConfiguration);
 
         IVoiceCodec GetCodec(uint user, SpeechCodecs codec);
-
+        /*
         void SendVoice(ArraySegment<byte> pcm, SpeechTarget target, uint targetId);
 
         void SendVoiceStop();
+        */
     }
 }

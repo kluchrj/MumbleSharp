@@ -4,6 +4,7 @@ using NAudio.Wave;
 
 namespace MumbleClient
 {
+    /*
     public class MicrophoneRecorder
     {
         private readonly IMumbleProtocol _protocol;
@@ -53,4 +54,5 @@ namespace MumbleClient
             _protocol.LocalUser.Channel.SendVoiceStop();
         }
     }
+    */
 }

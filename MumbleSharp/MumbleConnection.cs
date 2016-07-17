@@ -111,7 +111,7 @@ namespace MumbleSharp
         {
             _tcp.Send<T>(type, packet);
         }
-
+        /*
         public void SendVoice(ArraySegment<byte> packet)
         {
             //This is *totally wrong*
@@ -119,7 +119,7 @@ namespace MumbleSharp
 
             _tcp.Send(PacketType.UDPTunnel, packet);
         }
-
+        */
         private void ReceivedEncryptedUdp(byte[] packet)
         {
             byte[] plaintext = _cryptState.Decrypt(packet, packet.Length);
@@ -166,7 +166,7 @@ namespace MumbleSharp
                         if (data == null)
                             return;
 
-                        Protocol.EncodedVoice(data, session, sequence, codec, target);
+                        //Protocol.EncodedVoice(data, session, sequence, codec, target);
                     }
                     else
                     {

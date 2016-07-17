@@ -17,8 +17,9 @@ namespace MumbleClient
     public class ConsoleMumbleProtocol
         : BasicMumbleProtocol
     {
+        /*
         readonly Dictionary<User, AudioPlayer> _players = new Dictionary<User, AudioPlayer>(); 
-
+        
         public override void EncodedVoice(byte[] data, uint userId, long sequence, IVoiceCodec codec, SpeechTarget target)
         {
             User user = Users.FirstOrDefault(u => u.Id == userId);
@@ -27,19 +28,19 @@ namespace MumbleClient
 
             base.EncodedVoice(data, userId, sequence, codec, target);
         }
-
+        */
         protected override void UserJoined(User user)
         {
             base.UserJoined(user);
 
-            _players.Add(user, new AudioPlayer(user.Voice));
+            //_players.Add(user, new AudioPlayer(user.Voice));
         }
 
         protected override void UserLeft(User user)
         {
             base.UserLeft(user);
 
-            _players.Remove(user);
+            //_players.Remove(user);
         }
 
         public override void ServerConfig(ServerConfig serverConfig)
@@ -63,7 +64,7 @@ namespace MumbleClient
 
             base.PersonalMessageReceived(message);
         }
-
+        /*
         private class AudioPlayer
         {
             private readonly WaveOut _playbackDevice = new WaveOut();
@@ -76,5 +77,6 @@ namespace MumbleClient
                 _playbackDevice.PlaybackStopped += (sender, args) => Console.WriteLine("Playback stopped: " + args.Exception);
             }
         }
+        */
     }
 }
