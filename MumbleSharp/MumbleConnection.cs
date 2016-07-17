@@ -140,7 +140,7 @@ namespace MumbleSharp
             if (type == 1)
                 Protocol.UdpPing(packet);
             else
-            {
+            {/*
                 var vType = (SpeechCodecs)(packet[0] >> 5 & 0x7);
                 var target = (SpeechTarget)(packet[0] & 0x1F);
 
@@ -166,7 +166,7 @@ namespace MumbleSharp
                         if (data == null)
                             return;
 
-                        //Protocol.EncodedVoice(data, session, sequence, codec, target);
+                        Protocol.EncodedVoice(data, session, sequence, codec, target);
                     }
                     else
                     {
@@ -192,7 +192,7 @@ namespace MumbleSharp
 
                         //} while ((header & 0x80) > 0);
                     }
-                }
+                }*/
             }
         }
 
