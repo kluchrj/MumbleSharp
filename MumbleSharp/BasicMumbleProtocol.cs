@@ -280,7 +280,7 @@ namespace MumbleSharp
         public virtual void UdpPing(byte[] packet)
         {
         }
-        /*
+        
         /// <summary>
         /// Received a voice packet from the server
         /// </summary>
@@ -295,9 +295,9 @@ namespace MumbleSharp
             if (!UserDictionary.TryGetValue(userId, out user))
                 return;
 
-            user.ReceiveEncodedVoice(data, sequence, codec);
+            //user.ReceiveEncodedVoice(data, sequence, codec);
         }
-
+        /*
         public void SendVoice(ArraySegment<byte> pcm, SpeechTarget target, uint targetId)
         {
             _encodingBuffer.Add(pcm, target, targetId);

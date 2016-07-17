@@ -112,7 +112,7 @@ namespace MumbleSharp.Model
         {
             return other.Id == Id;
         }
-
+        /*
         private readonly AudioDecodingBuffer _buffer = new AudioDecodingBuffer();
         public IWaveProvider Voice
         {
@@ -126,5 +126,6 @@ namespace MumbleSharp.Model
         {
             _buffer.AddEncodedPacket(sequence, data, codec);
         }
+        */
     }
 }
